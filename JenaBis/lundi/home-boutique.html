@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Favicon icon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/plugins/images/favicon.png">
+  <title>Boutique - Accueil</title>
+  <!-- Bootstrap Core CSS -->
+  <link href="assets/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+  <link href="assets/plugins/bower_components/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+
+  <!-- Menu CSS -->
+  <link href="assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+  <!-- Animation CSS -->
+  <link href="assets/css/animate.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- color CSS you can use different color css from css/colors folder -->
+    <!-- We have chosen the skin-blue (green.css) for this starter
+          page. However, you can choose any other skin from folder css / colors .
+        -->
+        <link href="assets/css/colors/megna.css" id="theme" rel="stylesheet">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="cssload-speeding-wheel"></div>
+    </div>
+    <div id="wrapper" style="height:340px">
+<div style="margin:20px; background:white; padding:50px">
+<center>
+<h2 style="padding-bottom:20px">Boutique</h2>
+
+                <a href="signaler-panne.html" class="btn btn-info waves-effect waves-light ">Signaler une panne</a>
+        
+                <br><br><br>
+
+                <a href="signaler-incident.html" class="btn btn-success waves-effect waves-light">Signaler un incident</a>
+        </center>
+</div>
+     
+</div>
+<div class="row menu-bas">
+  <div style="width: 100%;">
+   <a href="home-boutique.html" type="button" class="btn btn-success btn-circle btn-xl"><i class="icon-home"></i> </a>
+ </div>
+ 
+
+<a id="sa-warning" class="hidden btn btn-danger">a</a>
+</div>
+
+</div>
+
+
+<!-- /#wrapper -->
+<!-- jQuery -->
+<script src="assets/plugins/bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="assets/bootstrap/dist/js/tether.min.js"></script>
+<script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="assets/plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+<!-- Menu Plugin JavaScript -->
+<script src="assets/plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js"></script>
+<!--slimscroll JavaScript -->
+<script src="assets/js/jquery.slimscroll.js"></script>
+<!--Wave Effects -->
+<script src="assets/js/waves.js"></script>
+<!-- Custom Theme JavaScript -->
+<script src="assets/js/custom.min.js"></script>
+<!--Style Switcher -->
+<script src="assets/plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
+<script src="assets/plugins/bower_components/sweetalert/sweetalert.min.js"></script>
+<!--     <script src="assets/plugins/bower_components/sweetalert/jquery.sweet-alert.custom.js"></script>
+-->
+
+<script>
+
+
+  !function($) {
+    "use strict";
+
+    var SweetAlert = function() {};
+
+    //examples 
+    SweetAlert.prototype.init = function() {
+
+
+//Warning Message
+    $('#sa-warning').click(function(){
+        swal({   
+            title: "Incident en cours",   
+            text: "Instructions: Evacuer les locaux.",   
+            type: "warning",   
+            showCancelButton: false,   
+            confirmButtonColor: "#DD6B55",   
+            confirmButtonText: "Instructions reçues",   
+            closeOnConfirm: false 
+        }, function(){   
+            swal("Confirmation envoyée", "Vous avez confirmé au centre avoir reçu l'information.", "success"); 
+        });
+    });
+
+  },
+    //init
+    $.SweetAlert = new SweetAlert, $.SweetAlert.Constructor = SweetAlert
+  }(window.jQuery),
+
+//initializing 
+function($) {
+  "use strict";
+  $.SweetAlert.init()
+}(window.jQuery);
+
+
+</script>
+
+</body>
+
+</html>
